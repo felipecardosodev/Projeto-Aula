@@ -1,2 +1,2 @@
 # Projeto-Aula
-Colaborativa com Gabriel
+Colaborativa com Gabriel e Felipe
