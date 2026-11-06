@@ -145,3 +145,43 @@ def listar_dados():
         
     print()
 
+# Função principal do sistema
+def menu():
+    while True:
+        try:
+            print("===== SISTEMA DE FATURAMENTO =====")
+            print("1 - Cadastrar Cliente")
+            print("2 - Cadastrar Plano")
+            print("3 - Criar Assinatura")
+            print("4 - Pesquisar Cliente")
+            print("5 - Atualizar Assinatura")
+            print("6 - Listar Dados")
+            print("0 - Sair")
+            opcao = int(input("Escolha uma opção: "))
+
+
+            if opcao == 1:
+                cadastrar_cliente()
+            elif opcao == 2:
+                cadastrar_plano()
+            elif opcao == 3:
+                criar_assinatura()
+            elif opcao == 4:
+                pesquisar_cliente()
+            elif opcao == 5:
+                atualizar_assinatura()
+            elif opcao == 6:
+                listar_dados()
+            elif opcao == 0:
+                print("Sistema encerrado.")
+                break
+            else:
+                print("Opção inválida.")
+
+
+        except ValueError:
+            print("Digite somente números.\n")
+
+
+# Inicialização do programa
+menu()
