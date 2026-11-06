@@ -120,3 +120,28 @@ def atualizar_assinatura():
     finally:
         print()
 
+
+# Função para listar informações do sistema
+def listar_dados():
+    print("\n--- CLIENTES ---")
+
+
+    for cliente in clientes:
+        print(cliente, clientes[cliente])
+
+
+    print("\n--- PLANOS ---")
+
+
+    for plano in planos:
+        print(plano, planos[plano])
+
+
+    print("\n--- ASSINATURAS ---")
+
+
+    for assinatura in assinaturas:
+        print(assinatura, assinaturas[assinatura])
+        
+    print()
+
