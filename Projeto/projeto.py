@@ -110,3 +110,13 @@ def atualizar_assinatura():
             planos[novo_plano]["valor"] *
             planos[novo_plano]["meses"]
         )
+    
+    except KeyError as erro:
+        print("Erro:", erro)
+    except ValueError:
+        print("Digite valores válidos.")
+    else:
+        print("Assinatura atualizada.")
+    finally:
+        print()
+
