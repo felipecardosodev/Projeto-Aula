@@ -93,3 +93,20 @@ def pesquisar_cliente():
         print("ID inválido.")
     finally:
         print()
+
+# Função para atualizar uma assinatura
+def atualizar_assinatura():
+    try:
+        id_assinatura = int(input("ID da assinatura: "))
+        if id_assinatura not in assinaturas:
+            raise KeyError("Assinatura inexistente.")
+        novo_plano = int(input("Novo ID do plano: "))
+        if novo_plano not in planos:
+            raise KeyError("Plano não encontrado.")
+        assinaturas[id_assinatura]["plano"] = novo_plano
+
+
+        assinaturas[id_assinatura]["valor_total"] = (
+            planos[novo_plano]["valor"] *
+            planos[novo_plano]["meses"]
+        )
