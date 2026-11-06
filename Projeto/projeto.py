@@ -50,3 +50,46 @@ def cadastrar_plano():
         print("Plano cadastrado com sucesso!")
     finally:
         print("Operação de plano finalizada.\n")
+
+def criar_assinatura():
+    try:
+        id_cliente = int(input("ID do cliente: "))
+        if id_cliente not in clientes:
+            raise KeyError("Cliente não encontrado.")
+        id_plano = int(input("ID do plano: "))
+        if id_plano not in planos:
+            raise KeyError("Plano não encontrado.")
+        id_assinatura = len(assinaturas) + 1
+
+        assinaturas[id_assinatura] = {
+            "cliente": id_cliente,
+            "plano": id_plano,
+            "valor_total":
+            planos[id_plano]["valor"] *
+            planos[id_plano]["meses"]
+        }
+
+    except KeyError as erro:
+        print("Erro:", erro)
+    except ValueError:
+        print("Digite apenas números.")
+    else:
+        print("Assinatura criada com sucesso!")
+    finally:
+        print("Processo de assinatura encerrado.\n")
+
+# Função para pesquisar cliente
+def pesquisar_cliente():
+    try:
+        id_cliente = int(input("Digite o ID do cliente: "))
+        if id_cliente not in clientes:
+            raise KeyError("Cliente não cadastrado.")
+        print("\nCliente encontrado:")
+        print(clientes[id_cliente])
+
+    except KeyError as erro:
+        print("Erro:", erro)
+    except ValueError:
+        print("ID inválido.")
+    finally:
+        print()
