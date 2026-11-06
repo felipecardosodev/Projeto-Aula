@@ -1,4 +1,4 @@
-#Projeto Aula 16/10
+#Projeto - Assinaturas e Mensalidades
 # Banco de dados em memória utilizando dicionários
 clientes = {}
 planos = {}
