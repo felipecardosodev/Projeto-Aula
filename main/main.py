@@ -11,12 +11,12 @@ from clientes_planos import (
     pesquisar_cliente
 )
 
-from assinaturas import (
+from main.assinaturas import (
     criar_assinatura,
     atualizar_assinatura
 )
 
-from relatorios import listar_dados
+from main.relatorios import listar_dados
 
 
 # ==========================================
