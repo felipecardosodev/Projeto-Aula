@@ -1,5 +1,5 @@
-# Sistema de Faturamento e Assinaturas de Clientes
-Colaborativa com Gabriel e Felipe
+
+# Sistema de Assinaturas e Mensalidades
 
 ## Sobre o projeto
 
